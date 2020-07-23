@@ -11,18 +11,10 @@ let package = Package(
             name: "SwiftGD",
             targets: ["SwiftGD"]),
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/kleinerQ/Cgd.git", from: "1.0.0"),
-    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
-        .target(
-            name: "SwiftGD",
-            dependencies: []),
-        .testTarget(
-            name: "SwiftGDTests",
-            dependencies: ["SwiftGD"]),
+        .systemLibrary(name: "gd", pkgConfig: "gdlib", providers: [.apt(["libgd-dev"]), .brew(["gd"])]),
+        .target(name: "SwiftGD", dependencies: ["gd"]),
+        .testTarget(name: "SwiftGDTests", dependencies: ["SwiftGD"])
     ]
 )

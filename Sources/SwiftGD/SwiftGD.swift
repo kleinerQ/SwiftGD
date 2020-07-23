@@ -1,6 +1,6 @@
 #if canImport(Darwin)
 import Darwin
-import Cgdmac
+import gd
 #else
 import Glibc
 import Cgdlinux
