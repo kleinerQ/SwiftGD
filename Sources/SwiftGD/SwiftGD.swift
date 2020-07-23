@@ -1,12 +1,11 @@
-#if canImport(Darwin)
-import Darwin
-import gd
-#else
+#if os(Linux)
 import Glibc
-import Cgdlinux
+#else
+import Darwin
 #endif
 
 import Foundation
+import gd
 
 public struct Color {
     public var red: Double
@@ -21,9 +20,6 @@ public struct Color {
         self.alpha = alpha
     }
 }
-
-let image = gdImageCreateTrueColor(800, 600)
-
 
 public class Image {
     // storage for our internal GD memory
