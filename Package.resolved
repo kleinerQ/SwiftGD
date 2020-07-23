@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Cgd",
+        "repositoryURL": "https://github.com/twostraws/Cgd.git",
+        "state": {
+          "branch": null,
+          "revision": "9cb9d56e8fe9c893c4e2ab5011dee9b6a13234c4",
+          "version": "0.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -9,7 +9,8 @@ let package = Package(
             targets: ["SwiftGD"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+    .package(url: "https://github.com/twostraws/Cgd.git", from: "0.3.0")],
     targets: [
         .systemLibrary(name: "gd", pkgConfig: "gdlib", providers: [.apt(["libgd-dev"]), .brew(["gd"])]),
         .target(name: "SwiftGD", dependencies: ["gd"]),
