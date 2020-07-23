@@ -7,7 +7,7 @@ import Cgdlinux
 #endif
 
 import Foundation
-
+import UIKit
 
 public struct Color {
     public var red: Double
