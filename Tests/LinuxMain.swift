@@ -1,7 +1,6 @@
 import XCTest
+@testable import SwiftGDTests
 
-import SwiftGDTests
-
-var tests = [XCTestCaseEntry]()
-tests += SwiftGDTests.allTests()
-XCTMain(tests)
+XCTMain([
+     testCase(SwiftGDTests.allTests)
+])
